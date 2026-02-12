@@ -18,6 +18,7 @@ namespace Astras_Comp_GUI.Core
         {
 
         }
+        private bool stylesINIT = false;
 
 
 
@@ -32,7 +33,10 @@ namespace Astras_Comp_GUI.Core
 
 
 
+        private void CrateUIStyles()
+        {
 
+        }
 
 
 
@@ -50,7 +54,7 @@ namespace Astras_Comp_GUI.Core
         static float WallWalkSpeed = 0f;
         bool CONTROLLERn = false;
         bool HasInit = false;
-      
+
 
         void walk()
         {

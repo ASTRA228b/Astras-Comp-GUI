@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using Photon.Pun;
+using GorillaExtensions;
 
 namespace Astras_Comp_GUI.Utilities
 {
-    internal class MediaManager
+    public class MediaManager : MonoBehaviour
     {
     }
 }
