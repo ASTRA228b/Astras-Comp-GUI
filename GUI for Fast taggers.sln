@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36705.20
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astras Comp GUI", "GUI for Fast taggers\Astras Comp GUI.csproj", "{CE9E8ECC-BBC2-49CA-A032-50FCAA39AF0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE9E8ECC-BBC2-49CA-A032-50FCAA39AF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9E8ECC-BBC2-49CA-A032-50FCAA39AF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9E8ECC-BBC2-49CA-A032-50FCAA39AF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9E8ECC-BBC2-49CA-A032-50FCAA39AF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A40084B8-B97D-47AC-A42D-32AE46523972}
+	EndGlobalSection
+EndGlobal
