@@ -2,19 +2,18 @@
 
 ## What It Is
 
-Astra’s Comp GUI is a competitive menu for Gorilla Tag.  
-It acts as a main control center that brings all my mods into one place.
+Astra’s Comp GUI is a competitive menu for Gorilla Tag that serves as a central control hub for all of my mods.
 
-It includes custom game changes and basic utilities designed for competitive and modded play.
+It combines custom gameplay changes and utility features into one organized interface, making everything easier to access and manage.
 
 *Almost better than Astra Client.*
 
 ## Features
 
 * **Centralized mod menu**
-* Clean and simple UI
-* Built for competitive players
-* Multiple mods combined into one GUI
+* Clean and simple user interface
+* Designed for competitive players
+* Multiple mods integrated into one GUI
 
 ## Requirements
 
@@ -23,13 +22,12 @@ It includes custom game changes and basic utilities designed for competitive and
 ## Installation
 
 1. Install BepInEx 5.x into your Gorilla Tag directory.
-2. Download the DLL from the newest release Download link: *coming soon*
-3. Drag The Downloaded Dll into your  `BepInEx/plugins` folder.
-4. Launch the game and Enjoy.
+2. Download the latest DLL from the Releases section. *(Download link: coming soon)*
+3. Place the downloaded DLL into your `BepInEx/plugins` folder.
+4. Launch the game.
 
 ## Warning
 
 Use at your own risk.
 
-I am not responsible for bans, broken installs, or any issues caused by using this mod.
-
+I am not responsible for bans, broken installations, or any issues that may result from using this mod.
