@@ -35,6 +35,7 @@ namespace Astras_Comp_GUI.Core
 
         private void CrateUIStyles()
         {
+            stylesINIT = true;
 
         }
 
@@ -49,6 +50,43 @@ namespace Astras_Comp_GUI.Core
             result.Apply();
             return result;
         }
+        Texture2D MakeRoundedTex(int width, int height, Color col, int radius = 20)
+        {
+            Texture2D result = new Texture2D(width, height);
+            result.filterMode = FilterMode.Bilinear;
+
+            Color clear = new Color(0, 0, 0, 0);
+
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    bool draw = true;
+
+                    
+                    if (x < radius && y < radius)
+                        draw = Vector2.Distance(new Vector2(x, y), new Vector2(radius, radius)) <= radius;
+
+                    
+                    if (x < radius && y >= height - radius)
+                        draw = Vector2.Distance(new Vector2(x, y), new Vector2(radius, height - radius)) <= radius;
+
+                    
+                    if (x >= width - radius && y < radius)
+                        draw = Vector2.Distance(new Vector2(x, y), new Vector2(width - radius, radius)) <= radius;
+
+                    
+                    if (x >= width - radius && y >= height - radius)
+                        draw = Vector2.Distance(new Vector2(x, y), new Vector2(width - radius, height - radius)) <= radius;
+
+                    result.SetPixel(x, y, draw ? col : clear);
+                }
+            }
+
+            result.Apply();
+            return result;
+        }
+
 
         // MOD BullShit 
         static float WallWalkSpeed = 0f;
