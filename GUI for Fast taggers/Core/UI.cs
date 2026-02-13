@@ -36,7 +36,7 @@ namespace Astras_Comp_GUI.Core
         private void CrateUIStyles()
         {
             stylesINIT = true;
-
+            // hi
         }
 
 
