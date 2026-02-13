@@ -4,10 +4,8 @@ using UnityEngine;
 using Astras_Comp_GUI.Core;
 using Photon.Realtime;
 using Photon.Voice;
-using System.Reflection;
-using System.Collections.Generic;
-using System.Collections;
-using Meta.WitAi.Utilities;
+using UnityEngine.InputSystem;
+using System.Diagnostics;
 
 
 namespace Astras_Comp_GUI.Core
@@ -19,9 +17,17 @@ namespace Astras_Comp_GUI.Core
 
         }
         private bool stylesINIT = false;
+        public bool GUIOPENH = false;
 
 
-
+        private void OnGUI()
+        {
+            if (!stylesINIT)
+            {
+                CrateUIStyles();
+            }
+            // real window soon
+        }
 
 
 
@@ -94,7 +100,7 @@ namespace Astras_Comp_GUI.Core
         bool HasInit = false;
 
 
-        void walk()
+        private void walk()
         {
             if (ControllerInputPoller.instance.rightGrab && ControllerInputPoller.instance.leftGrab)
             {
@@ -106,7 +112,7 @@ namespace Astras_Comp_GUI.Core
         }
 
 
-        void CON()
+        private void CON()
         {
             if (ControllerInputPoller.instance.rightControllerPrimaryButton && !CONTROLLERn)
             {
@@ -157,13 +163,18 @@ namespace Astras_Comp_GUI.Core
             OnScreenNotify.SendIT(h);
             Notify.Show(h);
         }
-        void Update()
+        private void Update()
         {
             HHHHHHHHHHHHH();
             CON();
             walk();
+            // fow later when gui is real
+            if (Keyboard.current.gKey.wasPressedThisFrame)
+            {
+                GUIOPENH = !GUIOPENH;
+            }
         }
-        void WELLCOME()
+        private void WELLCOME()
         {
             OnScreenNotify.SendIT("Hello, welcome to ASTRAS WALL WALK!");
             OnScreenNotify.SendIT("Press both grips to wall walk.");
