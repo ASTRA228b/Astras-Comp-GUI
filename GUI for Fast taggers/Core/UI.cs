@@ -94,52 +94,6 @@ namespace Astras_Comp_GUI.Core
         }
 
 
-        // MOD BullShit 
-        static float WallWalkSpeed = 0f;
-        bool CONTROLLERn = false;
-        bool HasInit = false;
-
-
-        private void walk()
-        {
-            if (ControllerInputPoller.instance.rightGrab && ControllerInputPoller.instance.leftGrab)
-            {
-                GTPlayer.Instance.bodyCollider.attachedRigidbody.AddForce(
-                    GTPlayer.Instance.bodyCollider.transform.forward * WallWalkSpeed,
-                    ForceMode.Acceleration
-                );
-            }
-        }
-
-
-        private void CON()
-        {
-            if (ControllerInputPoller.instance.rightControllerPrimaryButton && !CONTROLLERn)
-            {
-                WallWalkSpeed += 5f;
-                if (WallWalkSpeed >= 100f)
-                {
-                    WallWalkSpeed = 0f;
-                }
-                OnScreenNotify.SendIT($"[WallWalk] Speed set to {WallWalkSpeed}");
-            }
-            if (ControllerInputPoller.instance.rightControllerSecondaryButton && !HasInit)
-            {
-                WallWalkSpeed = 0f;
-                OnScreenNotify.SendIT("[WallWalk] Speed reset to 0");
-            }
-
-            HasInit = ControllerInputPoller.instance.rightControllerSecondaryButton;
-            CONTROLLERn = ControllerInputPoller.instance.rightControllerPrimaryButton;
-        }
-
-
-
-
-
-
-
-
         // notify shit 
 
         public void HHHHHHHHHHHHH()
@@ -166,22 +120,14 @@ namespace Astras_Comp_GUI.Core
         private void Update()
         {
             HHHHHHHHHHHHH();
-            CON();
-            walk();
+   
             // fow later when gui is real
             if (Keyboard.current.gKey.wasPressedThisFrame)
             {
                 GUIOPENH = !GUIOPENH;
             }
         }
-        private void WELLCOME()
-        {
-            OnScreenNotify.SendIT("Hello, welcome to ASTRAS WALL WALK!");
-            OnScreenNotify.SendIT("Press both grips to wall walk.");
-            OnScreenNotify.SendIT("Press A to change Wall Walk Speed.");
-            OnScreenNotify.SendIT("Press B to reset the Wall Walk Speed.");
-            OnScreenNotify.SendIT($"[WallWalk] Speed set to {WallWalkSpeed}");
-        }
+        
 
         public void OnLeaveRoom()
         {
